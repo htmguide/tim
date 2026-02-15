@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT | LABEL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Белый фон */
+            color: #ff0000;           /* Красный текст */
+            font-family: 'Dela Gothic One', cursive;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .contact-item {
+            margin: 15px 0;
+        }
+
+        a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.5rem;
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover {
+            opacity: 0.6;
+        }
+
+        .email {
+            margin-top: 30px;
+            font-size: 1.2rem;
+        }
+
+        /* Адаптивность для мобилок */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            a { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CONTACTS</h1>
+
+    <div class="contact-list">
+        <div class="contact-item">
+            <a href="https://t.me/PRENIKS" target="_blank">TG: PRENIKS</a>
+        </div>
+        <div class="contact-item">
+            <a href="https://t.me/puutv" target="_blank">TG: PUUTV</a>
+        </div>
+        <div class="email">
+            <a href="mailto:utubnatoyashiy@googlemail.com">utubnatoyashiy@googlemail.com</a>
+        </div>
+    </div>
+
+</body>
+</html>
