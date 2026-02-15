@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISTRIBUTION | LABEL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #ff0000;
+            font-family: 'Dela Gothic One', cursive;
+            padding: 40px 20px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        form { display: flex; flex-direction: column; gap: 20px; }
+        .row { display: flex; gap: 20px; }
+        .field-group { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+        input, select, textarea {
+            background: transparent;
+            border: 3px solid #ff0000;
+            padding: 15px;
+            color: #ff0000;
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 1rem;
+            outline: none;
+        }
+        input::placeholder, textarea::placeholder { color: rgba(255, 0, 0, 0.5); }
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(13%) sepia(94%) saturate(7454%) hue-rotate(359deg) brightness(94%) contrast(117%);
+        }
+        button {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            padding: 20px;
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover { background-color: #cc0000; }
+        .footer-text { text-align: center; font-size: 0.7rem; margin-top: 20px; line-height: 1.5; }
+        @media (max-width: 600px) { .row { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="https://formspree.io/f/mzdarynv" method="POST">
+            <input type="hidden" name="_next" value="https://records.timerik.v6.navy/end.html">
+            
+            <div class="row">
+                <div class="field-group">
+                    <label>MONTAGEM NESTA</label>
+                    <input type="text" name="artist_name" placeholder="MONTAGEM NESTA" required>
+                </div>
+                <div class="field-group">
+                    <label>TRACK</label>
+                    <select name="type">
+                        <option value="track">TRACK</option>
+                        <option value="album">ALBUM</option>
+                        <option value="ep">EP</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="field-group">
+                    <label>DATE OF OUT (BLANK = ASAP)</label>
+                    <input type="date" name="release_date">
+                </div>
+                <div class="field-group">
+                    <label>GENRE</label>
+                    <select name="genre">
+                        <option value="phonk">PHONK</option>
+                        <option value="brazilian_funk">BRAZILIAN FUNK</option>
+                        <option value="hip_hop">HIP HOP</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <label>.WAV LINK (FULL PACK LINK)</label>
+                <input type="url" name="wav_link" placeholder="GOOGLE DRIVE / DROPBOX LINK" required>
+            </div>
+
+            <div class="field-group">
+                <label>ARTWORK LINK (MIN 1500X1500PX)</label>
+                <input type="url" name="artwork_link" placeholder="JPG, JPEG, PNG LINK" required>
+            </div>
+
+            <div class="field-group">
+                <label>PROMO (AVAILABLE ONLY IF DATE IS SET)</label>
+                <select name="promo">
+                    <option value="no">NOT AVAILABLE / NO</option>
+                    <option value="yes">YES / REQUEST PROMO</option>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label>MORE INFO ABOUT ARTIST & RELEASE (FOR PROMO)</label>
+                <textarea name="bio" placeholder="BIO, HISTORY, SOCIAL LINKS..."></textarea>
+            </div>
+
+            <div class="field-group">
+                <label>EMAIL FOR CONTACT</label>
+                <input type="email" name="email" placeholder="YOUR@MAIL.COM" required>
+            </div>
+
+            <button type="submit">SUBMIT RELEASE</button>
+
+            <div class="footer-text">
+                УБЕДИТЕСЬ, ЧТО ВСЕ ССЫЛКИ ИМЕЮТ ОТКРЫТЫЙ ДОСТУП.<br>
+                IF THE RELEASE DATE IS EMPTY, WE WILL RELEASE IT AS FAST AS POSSIBLE.
+            </div>
+        </form>
+    </div>
+</body>
+</html>
