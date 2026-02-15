@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMERIK RECORDS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Курсор-рука */
+            cursor: url('https://cur.cursors-4u.net/symbols/sym-9/sym847.cur'), auto !important;
+        }
+
+        :root {
+            --red: #FF0000;
+            --black: #000000;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--white);
+            font-family: 'Dela Gothic One', cursive;
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        /* Шапка */
+        header {
+            padding: 80px 20px 40px;
+            text-align: center;
+            border-bottom: 12px solid var(--black);
+        }
+
+        .logo {
+            font-size: clamp(3.5rem, 18vw, 12rem);
+            line-height: 0.85;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .sub-logo {
+            font-size: clamp(1rem, 3vw, 1.8rem);
+            margin-top: 20px;
+            background: var(--black);
+            color: var(--white);
+            display: inline-block;
+            padding: 10px 30px;
+            text-transform: uppercase;
+        }
+
+        /* Контент */
+        .main-content {
+            padding: 40px 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .box {
+            border: 10px solid var(--black);
+            padding: 40px;
+            transition: 0.15s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .box:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .box:nth-child(2) {
+            border-color: var(--red);
+        }
+
+        .box:nth-child(2):hover {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .box h2 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+
+        .box p {
+            font-size: 1.1rem;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
+        /* Кнопка */
+        .action-area {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .send-btn {
+            background: var(--red);
+            color: var(--white);
+            font-size: clamp(2rem, 10vw, 6rem);
+            text-decoration: none;
+            padding: 30px 100px;
+            border: 10px solid var(--black);
+            display: inline-block;
+            text-transform: uppercase;
+            box-shadow: 20px 20px 0px var(--black);
+            transition: 0.1s;
+        }
+
+        .send-btn:hover {
+            box-shadow: 0px 0px 0px var(--black);
+            transform: translate(10px, 10px);
+        }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 40px;
+            text-align: center;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        /* Адаптив под мобилы */
+        @media (max-width: 768px) {
+            .box h2 { font-size: 2.5rem; }
+            .send-btn { padding: 20px 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TIMERIK<br><span>MUSIC</span></div>
+        <div class="sub-logo">ДОВЕРЯЯ НАМ, ВЫ НЕ ПОЖАЛЕЕТЕ</div>
+    </header>
+
+    <div class="main-content">
+        <div class="info-grid">
+            <div class="box">
+                <h2>О НАС</h2>
+                <p>БЕСПЛАТНАЯ ДИСТРИБУЦИЯ. ЛУЧШЕЕ ПРОМО. ВЫХОД ТРЕКА ЗА 2-7 ДНЕЙ. МЫ СЛЫШИМ КАЖДОГО.</p>
+            </div>
+            <div class="box">
+                <h2>УСЛОВИЯ</h2>
+                <p>80% РОЯЛТИ АРТИСТУ. 20% ЛЕЙБЛУ. ПОЛНАЯ ПРОЗРАЧНОСТЬ. ФРАНКФУРТ-НА-МАЙНЕ.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-area">
+        <a href="https://t.me/твой_линк" class="send-btn">DEMO</a>
+    </div>
+
+    <footer>
+        TIMERIK RECORDS // 2026 // GERMANY
+    </footer>
+
+</body>
+</html>
