@@ -3,144 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bandit001, AzerOne - Pozharnik | Smartlink</title>
-    
+    <title>Bandit001, AzerOne - Pozharnik</title>
     <link rel="icon" type="image/jpeg" href="pozharnik.jpeg">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-red: #ff3b30;
-            --bg-dark: #050505;
-            --card-bg: #121212;
-            --text-main: #ffffff;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+        :root { --red: #ff3b30; --bg: #0a0a0b; --card: #161618; }
+        body { 
+            background: var(--bg); 
+            color: #fff; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px; 
             background-image: radial-gradient(circle at top, #441111, transparent);
         }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            padding: 20px;
-            text-align: center;
+        .wrapper { 
+            width: 100%; 
+            /* Убрал жесткое ограничение, теперь он шире */
+            max-width: 600px; 
+            text-align: center; 
         }
-
-        .cover {
-            width: 100%;
-            aspect-ratio: 1/1;
-            /* Вернул расширение .jpeg */
-            background: url('pozharnik.jpeg') center/cover no-repeat;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255, 59, 48, 0.15);
-            margin-bottom: 25px;
+        .cover { 
+            width: 80%; /* Сделал чуть меньше, чтобы не давило */
+            margin: 0 auto 25px auto;
+            aspect-ratio: 1/1; 
+            background: url('pozharnik.jpeg') center/cover no-repeat; 
+            border-radius: 16px; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.7); 
         }
-
-        h1 {
-            font-family: 'Dela Gothic One', cursive;
-            font-size: 24px;
-            margin: 10px 0 5px;
-            text-transform: uppercase;
+        h1 { font-family: 'Dela Gothic One'; font-size: 32px; margin: 0; text-transform: uppercase; color: var(--red); }
+        .artists { color: #fff; font-size: 18px; margin: 5px 0 35px; opacity: 0.8; }
+        
+        .links { display: flex; flex-direction: column; gap: 15px; }
+        .link-card { 
+            background: var(--card); 
+            border: 1px solid #333; 
+            padding: 20px 25px; /* Увеличил отступы */
+            border-radius: 15px; 
+            display: flex; 
+            align-items: center; 
+            text-decoration: none; 
+            color: #fff; 
+            transition: 0.3s; 
         }
-
-        .artists {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 30px;
+        .link-card:hover { border-color: var(--red); background: #1e1e20; transform: scale(1.02); }
+        .link-card i { font-size: 24px; width: 40px; color: var(--red); }
+        .name { flex-grow: 1; font-weight: 700; font-size: 18px; text-align: left; }
+        .action { 
+            font-size: 12px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            background: rgba(255, 59, 48, 0.1);
+            border: 1px solid var(--red); 
+            padding: 8px 18px; 
+            border-radius: 8px; 
+            color: var(--red); 
         }
-
-        .links-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .link-item {
-            background: var(--card-bg);
-            padding: 14px 20px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            transition: all 0.2s ease-in-out;
-            border: 1px solid #1a1a1a;
-        }
-
-        .link-item:hover {
-            background: #181818;
-            border-color: var(--primary-red);
-            transform: scale(1.02);
-        }
-
-        .platform-name {
-            font-weight: 700;
-            font-size: 14px;
-        }
-
-        .btn-play {
-            color: var(--primary-red);
-            font-size: 11px;
-            font-weight: 800;
-            text-transform: uppercase;
-            border: 1px solid var(--primary-red);
-            padding: 5px 12px;
-            border-radius: 4px;
-        }
-
-        .link-item:hover .btn-play {
-            background: var(--primary-red);
-            color: white;
-        }
-
-        .footer {
-            margin-top: 40px;
-            font-size: 10px;
-            color: #333;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+        .link-card:hover .action { background: var(--red); color: #fff; }
+        .footer { margin-top: 50px; font-size: 12px; color: #555; letter-spacing: 3px; }
     </style>
 </head>
 <body>
-
-<div class="container">
+<div class="wrapper">
     <div class="cover"></div>
-
     <h1>POZHARNIK</h1>
     <div class="artists">Bandit001 & AzerOne</div>
-
-    <div class="links-list">
-        <a href="https://music.vk.com/link/nkw0R" class="link-item" target="_blank">
-            <span class="platform-name">VK Music</span>
-            <span class="btn-play">Слушать</span>
+    <div class="links">
+        <a href="https://music.vk.com/link/nkw0R" class="link-card" target="_blank">
+            <i class="fab fa-vk"></i><span class="name">VK Music</span><span class="action">Слушать</span>
         </a>
-        <a href="https://music.yandex.ru/album/40723456" class="link-item" target="_blank">
-            <span class="platform-name">Yandex Music</span>
-            <span class="btn-play">Слушать</span>
+        <a href="https://music.yandex.ru/album/40723456" class="link-card" target="_blank">
+            <i class="fas fa-play"></i><span class="name">Yandex Music</span><span class="action">Слушать</span>
         </a>
-        <a href="https://music.apple.com/ru/album/pozharnik-single/1877761288" class="link-item" target="_blank">
-            <span class="platform-name">Apple Music</span>
-            <span class="btn-play">Слушать</span>
+        <a href="https://music.apple.com/ru/album/pozharnik-single/1877761288" class="link-card" target="_blank">
+            <i class="fab fa-apple"></i><span class="name">Apple Music</span><span class="action">Слушать</span>
         </a>
-        <a href="https://www.youtube.com/watch?v=3t3PWDeHPqM&list=RDMM3t3PWDeHPqM&start_radio=1" class="link-item" target="_blank">
-            <span class="platform-name">YouTube Клип</span>
-            <span class="btn-play">Смотреть</span>
+        <a href="https://www.youtube.com/watch?v=3t3PWDeHPqM" class="link-card" target="_blank">
+            <i class="fab fa-youtube"></i><span class="name">YouTube Клип</span><span class="action">Смотреть</span>
+        </a>
+        <a href="https://music.youtube.com/watch?v=WnoVZT7wL9M" class="link-card" target="_blank">
+            <i class="fab fa-youtube"></i><span class="name">YouTube Music</span><span class="action">Слушать</span>
+        </a>
+        <a href="https://music.mts.ru/album/40723456" class="link-card" target="_blank">
+            <i class="fas fa-mobile-alt"></i><span class="name">MTS Music</span><span class="action">Слушать</span>
+        </a>
+        <a href="https://www.deezer.com/album/920598511" class="link-card" target="_blank">
+            <i class="fab fa-deezer"></i><span class="name">Deezer</span><span class="action">Слушать</span>
         </a>
     </div>
-
     <div class="footer">© TIMERIK RECORDS 2026</div>
 </div>
-
 </body>
 </html>
