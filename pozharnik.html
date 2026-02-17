@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandit001, AzerOne - Pozharnik | Smartlink</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-red: #ff3b30;
+            --bg-dark: #050505;
+            --card-bg: #121212;
+            --text-main: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: radial-gradient(circle at top, #300, transparent);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cover {
+            width: 100%;
+            aspect-ratio: 1/1;
+            background: url('pozharnik.jpeg') center/cover no-repeat;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 20px rgba(255, 59, 48, 0.2);
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 22px;
+            margin: 10px 0 5px;
+            text-transform: uppercase;
+        }
+
+        .artists {
+            color: #aaa;
+            font-size: 14px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-item {
+            background: var(--card-bg);
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+            border: 1px solid #222;
+        }
+
+        .link-item:hover {
+            background: #1a1a1a;
+            border-color: var(--primary-red);
+            transform: translateY(-2px);
+        }
+
+        .platform-name {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .btn-play {
+            background: var(--primary-red);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 10px;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="cover"></div>
+
+    <h1>POZHARNIK</h1>
+    <div class="artists">Bandit001 & AzerOne</div>
+
+    <div class="links-list">
+        <a href="https://music.vk.com/link/nkw0R" class="link-item" target="_blank">
+            <span class="platform-name">VK Music</span>
+            <span class="btn-play">Слушать</span>
+        </a>
+        <a href="https://music.yandex.ru/album/40723456" class="link-item" target="_blank">
+            <span class="platform-name">Yandex Music</span>
+            <span class="btn-play">Слушать</span>
+        </a>
+        <a href="https://music.apple.com/ru/album/pozharnik-single/1877761288" class="link-item" target="_blank">
+            <span class="platform-name">Apple Music</span>
+            <span class="btn-play">Слушать</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=3t3PWDeHPqM&list=RDMM3t3PWDeHPqM&start_radio=1" class="link-item" target="_blank">
+            <span class="platform-name">YouTube Клип</span>
+            <span class="btn-play">Смотреть</span>
+        </a>
+        <a href="https://music.youtube.com/watch?v=WnoVZT7wL9M" class="link-item" target="_blank">
+            <span class="platform-name">YouTube Music</span>
+            <span class="btn-play">Слушать</span>
+        </a>
+        <a href="https://music.mts.ru/album/40723456" class="link-item" target="_blank">
+            <span class="platform-name">Kion (MTS)</span>
+            <span class="btn-play">Слушать</span>
+        </a>
+        <a href="https://www.deezer.com/album/920598511" class="link-item" target="_blank">
+            <span class="platform-name">Deezer</span>
+            <span class="btn-play">Слушать</span>
+        </a>
+    </div>
+
+    <div class="footer">Powered by TIMERIK RECORDS</div>
+</div>
+
+</body>
+</html>
